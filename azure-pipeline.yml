@@ -5,6 +5,6 @@ jobs:
   steps:
   - pwsh: Stop-Service docker
   - bash: ./yml-sucks.sh
-  - script: choco install docker-desktop -y && set PATH="%PATH%;C:\Program Files\Docker\Docker" && && setX /m PATH="%PATH%;C:\Program Files\Docker\Docker"
+  - script: choco install docker-desktop -y && set PATH="%PATH%;C:\Program Files\Docker\Docker" && setX /m PATH="%PATH%;C:\Program Files\Docker\Docker"
   - bash: docker info
   - bash: docker-compose -f mysql.yml up -d
