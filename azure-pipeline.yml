@@ -3,6 +3,7 @@ jobs:
   pool:
     vmImage: 'windows-2019'
   steps:
+  - pwsh: Get-PackageProvider -Name *Docker*
   - pwsh: Uninstall-Package -Name docker -ProviderName DockerMsftProvider
   - pwsh: Uninstall-Module -Name DockerMsftProvider
   - script: call configure-docker.cmd
