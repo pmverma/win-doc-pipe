@@ -5,5 +5,5 @@ jobs:
   steps:
   - script: "DISM /online /get-features /format:table"
   - script: call configure-docker.cmd
-  - script: docker run --rm --isolation=hyperv alpine ls
+  - script: docker run --rm alpine ls
 
