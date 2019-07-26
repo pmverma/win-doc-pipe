@@ -3,8 +3,6 @@ jobs:
   pool:
     vmImage: 'windows-2019'
   steps:
-  - script: curl --help
-  - script: cd "C:\Program Files\" && mkdir "Linux Containers" && cd ".\Linux Containers\" && curl -LO https://github.com/linuxkit/lcow/releases/download/v4.14.35-v0.3.9/release.zip && unzip release.zip
   #- script: "DISM /online /get-features /format:table"
   - script: call configure-docker.cmd
   - script: docker run --rm alpine ls
