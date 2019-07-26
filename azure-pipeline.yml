@@ -1,0 +1,6 @@
+jobs:
+- job: Test
+  pool:
+    vmImage: 'windows-2019'
+  steps:
+  - bash: echo Hello World
