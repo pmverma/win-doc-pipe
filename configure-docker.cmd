@@ -14,7 +14,7 @@ net start com.docker.service
 cd "C:\Program Files\"
 mkdir "Linux Containers"
 cd ".\Linux Containers\"
-curl -OutFile release.zip https://github.com/linuxkit/lcow/releases/download/v4.14.35-v0.3.9/release.zip
-powershell Expand-Archive -DestinationPath . .\release.zip
+curl -LO https://github.com/linuxkit/lcow/releases/download/v4.14.35-v0.3.9/release.zip
+unzip release.zip
 
 docker info
