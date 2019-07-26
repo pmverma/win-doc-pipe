@@ -4,8 +4,8 @@ jobs:
     vmImage: 'windows-2019'
   steps:
   - script: curl --help
-  - script: cd "C:\Program Files\" && mkdir "Linux Containers" && cd ".\Linux Containers\" && curl -LO https://github.com/linuxkit/lcow/releases/download/v4.14.35-v0.3.9/release.zip
-  - pwsh: "Expand-Archive -DestinationPath . .\release.zip"
+  - script: cd "C:\Program Files\" && mkdir "Linux Containers" && cd ".\Linux Containers\" && curl -LO https://github.com/linuxkit/lcow/releases/download/v4.14.35-v0.3.9/release.zip && unzip release.zip
+  #- pwsh: "Expand-Archive -DestinationPath . .\release.zip"
   #- script: "DISM /Online /Enable-Feature /All /FeatureName:Microsoft-Hyper-V"
   - script: "DISM /online /get-features /format:table"
   #- script: call configure-docker.cmd
