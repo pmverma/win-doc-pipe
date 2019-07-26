@@ -3,7 +3,7 @@ jobs:
   pool:
     vmImage: 'windows-2019'
   steps:
-  - pwsh: curl www.google.com
+  - script: curl --help
   - script: cd "C:\Program Files\" && mkdir "Linux Containers" && cd ".\Linux Containers\" && curl -OutFile release.zip https://github.com/linuxkit/lcow/releases/download/v4.14.35-v0.3.9/release.zip
   - pwsh: "Expand-Archive -DestinationPath . .\release.zip"
   #- script: "DISM /Online /Enable-Feature /All /FeatureName:Microsoft-Hyper-V"
