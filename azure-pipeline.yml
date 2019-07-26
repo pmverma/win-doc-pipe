@@ -6,4 +6,5 @@ jobs:
   - pwsh: Stop-Service docker
   - bash: ./yml-sucks.sh
   - bash: choco install docker-desktop -y
+  - bash: docker info
   - bash: docker-compose -f mysql.yml up -d
