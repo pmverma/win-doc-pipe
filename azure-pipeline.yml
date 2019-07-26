@@ -4,5 +4,6 @@ jobs:
     vmImage: 'windows-2019'
   steps:
   - pwsh: Stop-Service docker
-  - script: choco install docker-desktop -y
+  - bash: echo $'{\n    "experimental": true\n}' | tee C:\ProgramData\Docker\config\daemon.json;
+  - bash: choco install docker-desktop -y
   - bash: docker-compose -f mysql.yml up -d
