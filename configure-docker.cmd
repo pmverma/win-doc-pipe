@@ -1,3 +1,4 @@
+set -x
 echo {"experimental": true} > "C:\ProgramData\Docker\config\daemon.json"
 net stop docker
 net stop com.docker.service
